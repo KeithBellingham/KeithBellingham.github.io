@@ -1,1 +1,782 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Keith Bellingham</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f9;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        /* Header */
+
+        header {
+            background: #1d4f73;
+            color: white;
+            padding: 35px 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.05rem;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #d9e0e5;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1d4f73;
+            font-weight: bold;
+            padding: 15px 18px;
+        }
+
+        nav a:hover {
+            background: #eef4f7;
+        }
+
+        /* Main */
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: #1d4f73;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Project grid */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        /* Project cards */
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .no-image {
+            height: 210px;
+            background: #e8eef2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #607d8b;
+            font-size: 1rem;
+        }
+
+        .project-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-year {
+            color: #607d8b;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-card h3 {
+            color: #1d4f73;
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+            line-height: 1.3;
+        }
+
+        .presented {
+            font-size: 0.9rem;
+            color: #546e7a;
+            margin-bottom: 15px;
+        }
+
+        .project-content h4 {
+            color: #37474f;
+            margin: 15px 0 5px;
+            font-size: 0.95rem;
+        }
+
+        .project-content p {
+            margin-top: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Button */
+
+        .project-button {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 18px;
+        }
+
+        .project-button a {
+            display: inline-block;
+            background: #1d4f73;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .project-button a:hover {
+            background: #153b56;
+        }
+
+        /* Footer */
+
+        footer {
+            margin-top: 60px;
+            background: #1d4f73;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 0.9rem;
+            }
+
+            main {
+                margin-top: 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <h1>Keith Bellingham</h1>
+        <p>Crop • Soil • Environmental Data Scientist</p>
+    </div>
+</header>
+
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Projects</a>
+        <a href="../publications/index.html">Publications</a>
+        <a href="../resume/">Resume</a>
+        <a href="../contact/">Contact</a>
+    </div>
+</nav>
+
+
+<main>
+
+    <section class="intro">
+        <h2>Projects</h2>
+
+        <p>
+            Selected projects involving soil and environmental sensing,
+            agricultural water management, machine learning, data analysis,
+            and commercial applications of environmental monitoring technology.
+        </p>
+    </section>
+
+
+    <section class="projects">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+            <img
+                src="Folium/IMG_0656.jpg"
+                alt="Cannabis fertigation project"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2022</div>
+
+                <h3>
+                    Cannabis Fertigation Based on Sensor Data
+                </h3>
+
+                <div class="presented">
+                    Cannabis Science Conference • Long Beach, California
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Cannabis cultivation is an emerging agricultural science
+                    where precise water management can affect both plant
+                    performance and crop value. This project investigated
+                    sensor-based fertigation and controlled water stress
+                    during the final growth stage before harvest. The work
+                    also evaluated water distribution in small growing
+                    containers, with potential applications to flowers,
+                    ornamental plants, and other greenhouse crops.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of monitoring systems to improve crop
+                    management, yield, and crop value.
+                </p>
+
+                <div class="project-button">
+                    <a href="Folium/Folium_UpLL.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+            <img
+                src="NRCS/IMG_9314.jpg"
+                alt="Soil moisture water supply forecasting project"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2014</div>
+
+                <h3>
+                    Improved Water Supply Forecasts Using Soil Moisture Data
+                </h3>
+
+                <div class="presented">
+                    4th International Symposium on Soil Water Measurement •
+                    Montreal, Quebec
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    This pilot study investigated whether soil moisture and
+                    soil-property data could improve streamflow forecasting.
+                    A machine-learning model was developed to combine soil
+                    moisture measurements with existing forecasting
+                    information, with potential applications to water-resource
+                    management and the hydroelectric power market.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of soil sensors and monitoring stations to
+                    improve river-flow forecasts for hydropower applications.
+                </p>
+
+                <div class="project-button">
+                    <a href="NRCS/NRCS_Stream_Flow.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+            <img
+                src="Workshop/SCANAL.jpg"
+                alt="Soil physics workshop"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2018–2026</div>
+
+                <h3>
+                    Soil Physics Workshop
+                </h3>
+
+                <div class="presented">
+                    Domestic and international conferences,
+                    customers, and distributors
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed and delivered a four-hour soil physics workshop
+                    covering soil properties, soil-water movement, data
+                    collection, and interpretation of soil sensor measurements.
+                    The workshop was presented to customers, distributors,
+                    and technical stakeholders in multiple countries.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Technical training used to support sales, develop
+                    customer relationships, and help end users and
+                    distributors apply soil-sensing technology.
+                </p>
+
+                <div class="project-button">
+                    <a href="Workshop/WorkShop2021A.pdf" target="_blank">
+                        View Workshop
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="project-card">
+
+            <img
+                src="FT/FT1.png"
+                alt="Soil water drainage assessment"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2021–2022</div>
+
+                <h3>
+                    Soil Water Drainage Assessment Using Fast Fourier Transform
+                </h3>
+
+                <div class="presented">
+                    Midwest U.S. stakeholders
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed an algorithm using Fast Fourier Transform
+                    analysis of time-series soil moisture data to identify
+                    drainage and over-irrigation at multiple soil depths.
+                    The approach was investigated for managing agricultural
+                    runoff by optimizing the application of nutrient-rich
+                    water to row crops.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of soil monitoring stations to fertigation
+                    systems and agricultural water-management programs.
+                </p>
+
+                <div class="project-button">
+                    <a href="FT/Drainage.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 5 -->
+
+        <article class="project-card">
+
+            <img
+                src="EGU_Blueberry/EGU1.jpg"
+                alt="Blueberry irrigation machine learning project"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2023–2024</div>
+
+                <h3>
+                    Irrigation Management Using Machine Learning
+                </h3>
+
+                <div class="presented">
+                    European Geosciences Union Annual Meeting •
+                    Vienna, Austria
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed and tested a machine-learning approach for
+                    irrigation management using aggregated soil moisture
+                    measurements from a single blueberry growing season
+                    combined with publicly available evapotranspiration data.
+                    The model predicts when crop water stress is likely to
+                    occur, providing irrigators with an indication of when
+                    irrigation may be required.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Potential to reduce field sensor requirements while
+                    providing irrigation-management information through
+                    monitoring stations and cloud services.
+                </p>
+
+                <div class="project-button">
+                    <a href="EGU_Blueberry/OralEGU2024_Bellingham_Fin.pdf"
+                       target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 6 -->
+
+        <article class="project-card">
+
+            <img
+                src="TDR/Picture1.png"
+                alt="TDR soil salinity machine learning project"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2023</div>
+
+                <h3>
+                    Machine Learning Method for Determining Soil Salinity
+                    Using TDR
+                </h3>
+
+                <div class="presented">
+                    Stakeholder presentations
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed a machine-learning method for estimating soil
+                    salinity from electrical signals generated by Time Domain
+                    Reflectometry (TDR) sensors. Using Python, key features
+                    of the TDR signal were identified and related to soil
+                    properties, then used with training data to develop
+                    machine-learning regression models.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Expands the potential application of TDR sensors beyond
+                    soil-moisture measurement to soil-salinity assessment.
+                </p>
+
+                <div class="project-button">
+                    <a href="TDR/EC_SM.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 7 -->
+
+        <article class="project-card">
+
+            <div class="no-image">
+                Real-Time Landslide Monitoring
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-year">2025</div>
+
+                <h3>
+                    Deployment of Landslide Risk Detection Systems in
+                    Southeast Asia
+                </h3>
+
+                <div class="presented">
+                    Stakeholder presentations
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Investigated the use of real-time soil hydraulic
+                    monitoring to support landslide risk detection in
+                    Southeast Asia. The approach focuses on monitoring
+                    soil hydraulic head, a dynamic parameter related to
+                    soil water content and water-table conditions, alongside
+                    static soil-stability characteristics.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of monitoring stations, soil sensors, and
+                    cloud services to landslide monitoring and government
+                    safety programs.
+                </p>
+
+                <div class="project-button">
+                    <a href="Landslide/Landslides.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 8 -->
+
+        <article class="project-card">
+
+            <img
+                src="RainGarden/P1.jpeg"
+                alt="Stormwater rain garden monitoring"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2022</div>
+
+                <h3>
+                    Determining Plant Water Stress in Stormwater Rain Gardens
+                </h3>
+
+                <div class="presented">
+                    Municipal stakeholders
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed a sensor-based approach for identifying plant
+                    water stress in stormwater rain gardens. Time-series soil
+                    moisture measurements can be used to identify the
+                    soil-water conditions at which plants begin to experience
+                    stress, providing a data-driven basis for irrigation
+                    decisions.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of soil monitoring stations and cloud services
+                    to municipal stormwater and irrigation programs.
+                </p>
+
+                <div class="project-button">
+                    <a href="RainGarden/RainGarden.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 9 -->
+
+        <article class="project-card">
+
+            <img
+                src="OSU_Sage/IMG_2865.jpeg"
+                alt="Greenhouse ornamental irrigation study"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2026</div>
+
+                <h3>
+                    Irrigation Optimization for Greenhouse-Grown
+                    Evergreen Ornamentals
+                </h3>
+
+                <div class="presented">
+                    CANVAS • Portland, Oregon
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Supported a study to define drought-stress thresholds
+                    for greenhouse-grown ornamental plants and evaluate
+                    SAGE as a visual indicator of plant water status. The
+                    objective is to provide commercial nurseries with a
+                    practical method for identifying plant water stress
+                    and improving irrigation management at the individual
+                    plant level before distribution.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Application of plant-stress monitoring technology to
+                    commercial nursery production and irrigation management.
+                </p>
+
+                <div class="project-button">
+                    <a href="OSU_Sage/SageExpt.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- PROJECT 10 -->
+
+        <article class="project-card">
+
+            <img
+                src="SWRC_Lab/Pic2.png"
+                alt="Soil water retention curve laboratory"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <div class="project-year">2025–2026</div>
+
+                <h3>
+                    Commercial Water Retention Curve Laboratory
+                </h3>
+
+                <div class="presented">
+                    EuroSoil • Seville, Spain • EGU • Other stakeholders
+                </div>
+
+                <h4>Project Description & Application</h4>
+
+                <p>
+                    Developed and piloted a commercial laboratory approach
+                    for measuring soil water retention curves using real-time
+                    monitoring during laboratory testing. Incorporating
+                    sensors directly into soil samples during testing has
+                    the potential to accelerate measurements and reduce
+                    errors while making soil-specific water retention data
+                    more practical for commercial applications.
+                </p>
+
+                <h4>Commercial Relevance</h4>
+
+                <p>
+                    Commercial applications include soil sensors, soil-water
+                    retention laboratory equipment, and testing services for
+                    governmental water-resource authorities.
+                </p>
+
+                <div class="project-button">
+                    <a href="SWRC_Lab/WaterRet0625.pdf" target="_blank">
+                        View Project PDF
+                    </a>
+                </div>
+
+            </div>
+        </article>
+
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Keith Bellingham</p>
+</footer>
+
+</body>
+</html>
