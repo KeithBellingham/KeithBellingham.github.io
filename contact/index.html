@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Contact | Keith Bellingham</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f9fb;
+            color: #333;
+        }
+
+        header {
+            background: #1d4f73;
+            color: white;
+            padding: 25px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 5px 0 20px;
+            font-size: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1d4f73;
+            margin-top: 0;
+        }
+
+        .intro {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-bottom: 22px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        button {
+            background: #1d4f73;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #163d59;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            .contact-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Keith Bellingham</h1>
+    <p>Crop • Soil • Environmental Data Scientist</p>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../projects/index.html">Projects</a>
+        <a href="../publications/index.html">Publications</a>
+        <a href="../resume/">Resume</a>
+        <a href="index.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="contact-card">
+
+        <h2>Contact</h2>
+
+        <p class="intro">
+            I'd be happy to hear from you. Please use the form below
+            to send an inquiry.
+        </p>
+
+        <form action="YOUR_FORMSPREE_URL" method="POST">
+
+            <label for="name">Name *</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+            >
+
+            <label for="organization">Organization</label>
+            <input
+                type="text"
+                id="organization"
+                name="organization"
+            >
+
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+            >
+
+            <label for="email">Email *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+
+            <label for="message">Message *</label>
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
+
+            <button type="submit">Send Inquiry</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Keith Bellingham
+</footer>
+
+</body>
+</html>
